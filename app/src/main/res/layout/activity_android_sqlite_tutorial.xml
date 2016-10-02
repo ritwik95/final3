@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_android_sqlite_tutorial"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.ritwikkaul.final3.AndroidSQLiteTutorialActivity">
+
+    <Button
+        android:text="view all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewallBtn"
+        android:onClick="displaynames"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="26dp" />
+
+    <Button
+        android:text="Delete Person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button5"
+        android:onClick="deleteperson"
+        android:layout_weight="2"
+        android:layout_above="@+id/viewallBtn"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="30dp"
+        android:layout_toStartOf="@+id/saveBtn" />
+
+    <Button
+        android:text="Get Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/getinfoBtn"
+        android:onClick="getinfofun"
+        android:layout_weight="1"
+        android:layout_alignBaseline="@+id/button5"
+        android:layout_alignBottom="@+id/button5"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/button5" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Enter ID"
+        android:ems="10"
+        android:id="@+id/getinfo"
+        android:textAlignment="center"
+        android:background="@android:drawable/editbox_background_normal"
+        android:layout_marginBottom="33dp"
+        android:layout_above="@+id/button5"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Number of enteries in database"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button7"
+        android:onClick="count"
+        android:layout_above="@+id/getinfo"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="26dp" />
+
+    <Button
+        android:text="SAve details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/saveBtn"
+        android:onClick="addname"
+        android:layout_alignBottom="@+id/number"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/name" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Phone Number"
+        android:ems="10"
+        android:id="@+id/number"
+        android:textAlignment="center"
+        android:background="@android:drawable/editbox_background_normal"
+        android:layout_below="@+id/name"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="19dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:ems="10"
+        android:id="@+id/name"
+        android:textAlignment="center"
+        android:background="@android:drawable/editbox_background_normal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:text="Update Details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button7"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/updateBtn"
+        android:layout_alignParentEnd="true"
+        android:onClick="update" />
+</RelativeLayout>
